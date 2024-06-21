@@ -52,157 +52,167 @@
           </div>
         </div>
 
+
+        <div id="breakfast-grid">
+
         <!-- Tradtional Breakfast-->
 
-        <div class="container traditional">
-          <img src="./images/traditional-english.jpg" alt="" />
+        <section class="container traditional">
+          <div class="food-container">
+            <img src="./images/traditional-english.jpg" alt="" />
+          </div>
           <div class="traditional-english">
-            <h2>Traditional English Breakfast</h2>
-            <div class="health-info">
-              <p>
-                <span class="cal">1014kcal / 719kcal</span>
+            <h3>Traditional English Breakfast</h3>
+            <p>
                 <span class="dietary gfa">gfa</span>
                 <span class="dietary dfa">dfa</span>
-              </p>
-            </div>
+                <span class="price">Main £12 / Light £10</span>
+            </p>
+            <p class="cal">1014kcal / 719kcal</p> 
             <div class="description">
               <p>Sausage, bacon, egg, mushroom, tomato, beans, hash brown</p>
-              <p class="price">Main £12 / Light £10</p>
             </div>
 
             <div class="traditional-plant">
-              <h2 class="plant-breakfast">
+              <h3 id="plant-breakfast">
                 <span class="plant">Plant</span>-Based Breakfast
-              </h2>
-              <div class="health-info">
-                <p>
-                <span class="cal">854kcal</span>
+              </h3>
+              <p>
                 <span class="dietary dfa">dfa</span>
-                <span class="dietary vga">vga</span>                  
-                </p>
-              </div>
-
+                <span class="dietary vga">vga</span>
+                <span class="price">Main £12</span>
+                
+              </p>
+              <p class="cal">854kcal</p>
               <div class="description">
                 <p>
                   <span class="plant">Plant</span> based Sausage, bacon, egg,
                   mushroom, tomato, beans, hash brown
-                </p>
-                <p class="price">Main £12</p>
+                </p> 
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Toast -->
 
-        <div class="container toast">
-          <img src="./images/toast-avocado.jpg" alt="" />
-          <h2>Toast</h2>
-          <h3>Selection of toppings served on Sourdough Bloomer</h3>
-          <h4>Eggs<span class="price">£8</span></h4>
-          <div class="description">
-            <p>Fried, Poached or Scrambled</p>
-            <p id="avo">Add smashed avocado<span class="price">£2</span></p>
+        <section class="container toast">
+          <div class="food-container">
+            <img src="./images/toast-avocado.jpg" alt="" />
           </div>
-          <div class="health-info">
-            <p>
+          <h3>Toast</h3>
+          <aside>Selection of toppings served on Sourdough Bloomer</aside>
+          
+          <div class="toast-toppings" id="toast-eggs">
+            <h4>
+              Eggs
               <span class="dietary gfa">gfa</span>
-              <span class="cal">927kcal</span>  
-            </p>
-            </div>
-            
-            <h4>Baked beans<span class="price">£7</span></h4>
-
+              <span class="price">£8</span>
+            </h4>
+            <p class="cal">927kcal</p>
             <div class="description">
-            <p>Traditional Heinz Beans</p>
+              <p>Fried, Poached or Scrambled</p>
+              <p id="avo">Add smashed avocado<span class="price">£2</span></p>
             </div>
-            <div class="health-info">
-              <p>
-              <span class="cal">869kcal</span>
+          </div>
+
+          <div class="toast-toppings">
+            <h4>
+              Baked beans
               <span class="dietary gfa">gfa</span>
               <span class="dietary dfa">dfa</span>
-              <span class="dietary vga">vga</span>                
-              </p>
-
-            </div>   
-            
-            <h4>Mascarpone<br />Mushrooms<span class="price">£7</span></h4>
+              <span class="dietary vga">vga</span>
+              <span class="price">£7</span>             
+            </h4>
+            <p class="cal">869kcal</p>
             <div class="description">
-            <p>Sautéed chestnut mushrooms and Mascarpone cream cheese</p>
-          </div>
-            <div class="health-info">
-              <p>
-              <span class="cal">928kcal</span>
-              <span class="dietary gfa">gfa</span>                
-              </p>
+              <p>Traditional Heinz Beans</p>
             </div>
-        </div>
+          </div>
+
+          <div class="toast-toppings">
+            <h4>
+              Mascarpone Mushrooms
+              <span class="dietary gfa">gfa</span>
+              <span class="price">£7</span>
+            </h4>
+            <p class="cal">928kcal</p>
+            <div class="description">
+             <p>Sautéed chestnut mushrooms and Mascarpone cream cheese</p>
+            </div>
+          </div>
+
+        </section>
 
         <!-- Granola Sundae -->
 
-        <div class="container granola-sundae">
-          <img src="./images/granola-sundae.jpg" alt="" />
-          <h2>Granola Sundae</h2>
-          <div class="health-info">
-            <p>
-            <span class="cal">430kcal</span>
+        <section class="container granola-sundae">
+          <div class="food-container">
+            <img src="./images/granola-sundae.jpg" alt="" />
+          </div>
+          <h3>Granola Sundae</h3>
+          <p>
             <span class="dietary gf">gf</span>
-            <span class="dietary nuts">NUTS</span>              
-            </p>
-          </div>
+            <span class="dietary nuts">NUTS</span> 
+            <span class="price">£7</span>             
+          </p>
+          <p class="cal">430kcal</p>
           <div class="description">
-            
             <p>Fruit compote, Greek yoghurt</p>
-            <p class="price">£7</p>
           </div>
-        </div>
+        </section>
 
         <!-- Porridge-->
 
-        <div class="container porridge">
-          <img src="./images/porridge.jpg" alt="" />
-          <h2>Porridge</h2>
-          <div class="health-info">
-            <p>
-              <span class="dietary gfa">gfa</span>
-            </p>
+        <section class="container porridge">
+          <div class="food-container">
+            <img src="./images/porridge.jpg" alt="" />
           </div>
+          <h3>Porridge</h3>
+          <p>
+            <span class="dietary gfa">gfa</span>
+            <span class="price">£6</span>
+          </p>
           <div class="description">
-            
-            <p>
-              Fruit compote <span class="cal">418kcal</span><br />Honey
-              <span class="cal">467kcal</span>
-            </p>
-            <p class="price">£6</p>
+            <p>Fruit compote <span class="cal">418kcal</span></p>
+            <p>Honey <span class="cal">467kcal</span></p>
           </div>
-        </div>
+        </section>
 
         <!-- Breakfast Sandwiches -->
 
         <div class="container b-sandwich">
-          <img src="./images/Breakfast-Sandwich.jpg" alt="" />
-          <h2>Breakfast sandwiches</h2>
+          <div class="food-container">
+            <img src="./images/Breakfast-Sandwich.jpg" alt="" />
+          </div>
+          
+          <h3>Breakfast sandwiches</h3>
           <div class="description">
             <p>
-              Bacon <span class="dietary gfa">gfa</span>
+              Bacon 
+              <span class="dietary gfa">gfa</span>
               <span class="dietary dfa">dfa</span>
               <span class="cal"> 395kcal</span>
               <span class="price">£7</span>
             </p>
 
             <p>
-              Pork sausage <span class="dietary dfa">dfa</span>
-              <span class="cal"> 369kcal</span><span class="price">£7</span>
+              Pork sausage 
+              <span class="dietary dfa">dfa</span>
+              <span class="cal"> 369kcal</span>
+              <span class="price">£7</span>
             </p>
 
             <p>
-              Bacon & sausage <span class="dietary dfa">dfa</span>
+              Bacon & sausage 
+              <span class="dietary dfa">dfa</span>
               <span class="cal"> 584kcal</span>
               <span class="price">£8</span>
             </p>
 
             <p>
-              <span class="plant">Plant </span>sausage
+              <span class="plant">Plant </span>
+              sausage
               <span class="dietary df">df</span>
               <span class="dietary vg">vg</span>
               <span class="cal"> 301kcal</span>
@@ -211,12 +221,19 @@
           </div>
         </div>
       </article>
+      </div>
 
       <!-- Paninies and Jackets -->
 
       <article id="panini-jackets">
+        <div class="container menu-headings">
+          <h2>Toasted Paninies and Jacket Potatoes</h2>    
+        </div>
         <div class="container panini">
-          <img src="./images/panini.jpg" alt="#">
+          <div class="food-container">
+            <img src="./images/panini.jpg" alt="#">
+          </div>
+          
           <h2>Toasted Panini</h2>
           <h3>Served from 9.00 - 14.30</h3>
           <h4>Served with dressed leaves and chips</h4>
@@ -229,7 +246,9 @@
           </div>
         </div>
         <div class="container jackets">
-          <img src="./images/jacket.jpg" alt="">
+          <div class="food-container">
+            <img src="./images/jacket.jpg" alt="">
+          </div>
           <h2>Jacket Potatoes</h2>
           <h3>Served from 12.00 - 14.30</h3>
           <h4>Mixed leaf salad, coleslaw</h4>
@@ -252,7 +271,7 @@
         
         <div class="container">
           <h3>Mushroom and lentil linguine<span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">Main £14 / Light £9</span></h3>
-          <span class="cal">801kcal / 401kcal</span>
+          <p class="cal">801kcal / 401kcal</p>
           <div class="description">
             <p>Served with homemade Sourdough garlic bread</p>
           </div>
