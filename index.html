@@ -13,16 +13,31 @@
     <title>Document</title>
   </head>
   <body>
+
     <header>
-      <div class="navbar">
-        <h1>Garden Centre Restaurant<br />MENU</h1>
+      <h1>Garden Centre Restaurant<br />MENU</h1>
+      <nav class="container">
+        <div >
+        <ul>
+          <li><a href="#breakfast">Breakfast</a></li>
+          <li><a href="#panini-jackets">Paninies & Jackets</a></li>
+          <li><a href="#mains">Mains</a></li>
+          <li><a href="#light-lunch">Light Lunches</a></li>
+          <li><a href="#sides">Sides</a></li>
+          <li><a href="#sunday-lunch">Sunday Lunch</a></li>
+          <li><a href="#afternoon-tea">Afternoon Tea</a></li>
+          <li><a href="#child-menu">Kids Menu</a></li>
+        </ul>
       </div>
+
     </header>
+
     <main>
       <!-- Main Breakfast info -->
 
-      <article class="breakfast-grid">
-        <div class="breakfast menu-breakfast">
+      <article id="breakfast">
+
+        <div class="container" id="breakfast-headings">
           <h2>Breakfast</h2>
           <div id="breakfast-info">
             <h3>Served from 9:00 - 11:30</h3>
@@ -37,168 +52,499 @@
           </div>
         </div>
 
+
+        <div id="breakfast-grid">
+
         <!-- Tradtional Breakfast-->
 
-        <div class="breakfast traditional">
-          <img src="./images/traditional-english.jpg" alt="" />
+        <section class="container traditional">
+          <div class="food-container">
+            <img src="./images/traditional-english.jpg" alt="" />
+          </div>
           <div class="traditional-english">
-            <h2>Traditional English Breakfast</h2>
-            <div class="health-info">
-              <p>
-                <span class="cal">1014kcal / 719kcal</span
-                ><span class="dietary gfa">gfa</span
-                ><span class="dietary dfa">dfa</span>
-              </p>
-            </div>
-            <div class="breakfast-description">
+            <h3>Traditional English Breakfast</h3>
+            <p>
+                <span class="dietary gfa">gfa</span>
+                <span class="dietary dfa">dfa</span>
+                <span class="price">Main £12 / Light £10</span>
+            </p>
+            <p class="cal">1014kcal / 719kcal</p> 
+            <div class="description">
               <p>Sausage, bacon, egg, mushroom, tomato, beans, hash brown</p>
-              <p class="price">Main £12 / Light £10</p>
-              <p></p>
             </div>
 
             <div class="traditional-plant">
-              <h2 class="plant-breakfast">
+              <h3 id="plant-breakfast">
                 <span class="plant">Plant</span>-Based Breakfast
-              </h2>
-              <div class="health-info">
-                <p>
-                <span class="cal">854kcal</span>
-                <span class="dietary dfa">dfa</span
-                ><span class="dietary vga">vga</span>                  
-                </p>
-              </div>
-
-              <div class="breakfast-description">
+              </h3>
+              <p>
+                <span class="dietary dfa">dfa</span>
+                <span class="dietary vga">vga</span>
+                <span class="price">Main £12</span>
+                
+              </p>
+              <p class="cal">854kcal</p>
+              <div class="description">
                 <p>
                   <span class="plant">Plant</span> based Sausage, bacon, egg,
                   mushroom, tomato, beans, hash brown
-                </p>
-                <p class="price">Main £12</p>
+                </p> 
               </div>
             </div>
           </div>
-        </div>
+        </section>
 
         <!-- Toast -->
 
-        <div class="breakfast toast">
-          <img src="./images/toast-avocado.jpg" alt="" />
-          <h2>Toast</h2>
-          <h3>Selection of toppings served on Sourdough Bloomer</h3>
+        <section class="container toast">
+          <div class="food-container">
+            <img src="./images/toast-avocado.jpg" alt="" />
+          </div>
+          <h3>Toast</h3>
+          <aside>Selection of toppings served on Sourdough Bloomer</aside>
           
-            
-            <h4>Eggs<span class="price">£8</span></h4>
-
-            <div class="breakfast-description">
-            <p>Fried, Poached or Scrambled</p>
-            <p id="avo">Add smashed avocado<span class="price">£2</span></p>
-          </div>
-            <div class="health-info">
-              <p>
+          <div class="toast-toppings" id="toast-eggs">
+            <h4>
+              Eggs
               <span class="dietary gfa">gfa</span>
-              <span class="cal">927kcal</span>  
-              </p>
+              <span class="price">£8</span>
+            </h4>
+            <p class="cal">927kcal</p>
+            <div class="description">
+              <p>Fried, Poached or Scrambled</p>
+              <p id="avo">Add smashed avocado<span class="price">£2</span></p>
             </div>
-            
-            <h4>Baked beans<span class="price">£7</span></h4>
-
-            <div class="breakfast-description">
-            <p>Traditional Heinz Beans</p>
-            </div>
-            <div class="health-info">
-              <p>
-              <span class="cal">869kcal</span>
-              <span class="dietary gfa">gfa</span
-              ><span class="dietary dfa">dfa</span
-              ><span class="dietary vga">vga</span>                
-              </p>
-
-            </div>   
-            
-            <h4>Mascarpone<br />Mushrooms<span class="price">£7</span></h4>
-            <div class="breakfast-description">
-            <p>Sautéed chestnut mushrooms and Mascarpone cream cheese</p>
           </div>
-            <div class="health-info">
-              <p>
-              <span class="cal">928kcal</span>
-              <span class="dietary gfa">gfa</span>                
-              </p>
+
+          <div class="toast-toppings">
+            <h4>
+              Baked beans
+              <span class="dietary gfa">gfa</span>
+              <span class="dietary dfa">dfa</span>
+              <span class="dietary vga">vga</span>
+              <span class="price">£7</span>             
+            </h4>
+            <p class="cal">869kcal</p>
+            <div class="description">
+              <p>Traditional Heinz Beans</p>
             </div>
-        </div>
+          </div>
+
+          <div class="toast-toppings">
+            <h4>
+              Mascarpone Mushrooms
+              <span class="dietary gfa">gfa</span>
+              <span class="price">£7</span>
+            </h4>
+            <p class="cal">928kcal</p>
+            <div class="description">
+             <p>Sautéed chestnut mushrooms and Mascarpone cream cheese</p>
+            </div>
+          </div>
+
+        </section>
 
         <!-- Granola Sundae -->
 
-        <div class="breakfast granola-sundae">
-          <img src="./images/granola-sundae.jpg" alt="" />
-          <h2>Granola Sundae</h2>
-          <div class="health-info">
-            <p>
-            <span class="cal">430kcal</span>
-            <span class="dietary gf">gf</span
-            ><span class="dietary nuts">NUTS</span>              
-            </p>
+        <section class="container granola-sundae">
+          <div class="food-container">
+            <img src="./images/granola-sundae.jpg" alt="" />
           </div>
-          <div class="breakfast-description">
-            
+          <h3>Granola Sundae</h3>
+          <p>
+            <span class="dietary gf">gf</span>
+            <span class="dietary nuts">NUTS</span> 
+            <span class="price">£7</span>             
+          </p>
+          <p class="cal">430kcal</p>
+          <div class="description">
             <p>Fruit compote, Greek yoghurt</p>
-            <p class="price">£7</p>
           </div>
-        </div>
+        </section>
 
         <!-- Porridge-->
 
-        <div class="breakfast porridge">
-          <img src="./images/porridge.jpg" alt="" />
-          <h2>Porridge</h2>
-          <div class="health-info">
-            <p>
-              <span class="dietary gfa">gfa</span>
-            </p>
+        <section class="container porridge">
+          <div class="food-container">
+            <img src="./images/porridge.jpg" alt="" />
           </div>
-          <div class="breakfast-description">
-            
-            <p>
-              Fruit compote <span class="cal">418kcal</span><br />Honey
-              <span class="cal">467kcal</span>
-            </p>
-            <p class="price">£6</p>
+          <h3>Porridge</h3>
+          <p>
+            <span class="dietary gfa">gfa</span>
+            <span class="price">£6</span>
+          </p>
+          <div class="description">
+            <p>Fruit compote <span class="cal">418kcal</span></p>
+            <p>Honey <span class="cal">467kcal</span></p>
           </div>
-        </div>
+        </section>
 
         <!-- Breakfast Sandwiches -->
 
-        <div class="breakfast b-sandwich">
-          <img src="./images/Breakfast-Sandwich.jpg" alt="" />
-          <h2>Breakfast sandwiches</h2>
-          <div class="breakfast-description">
+        <div class="container b-sandwich">
+          <div class="food-container">
+            <img src="./images/Breakfast-Sandwich.jpg" alt="" />
+          </div>
+          
+          <h3>Breakfast sandwiches</h3>
+          <div class="description">
             <p>
-              Bacon <span class="dietary gfa">gfa</span
-              ><span class="dietary dfa">dfa</span
-              ><span class="cal"> 395kcal</span>
+              Bacon 
+              <span class="dietary gfa">gfa</span>
+              <span class="dietary dfa">dfa</span>
+              <span class="cal"> 395kcal</span>
               <span class="price">£7</span>
             </p>
 
             <p>
-              Pork sausage <span class="dietary dfa">dfa</span
-              ><span class="cal"> 369kcal</span><span class="price">£7</span>
+              Pork sausage 
+              <span class="dietary dfa">dfa</span>
+              <span class="cal"> 369kcal</span>
+              <span class="price">£7</span>
             </p>
 
             <p>
-              Bacon & sausage <span class="dietary dfa">dfa</span
-              ><span class="cal"> 584kcal</span><span class="price">£8</span>
+              Bacon & sausage 
+              <span class="dietary dfa">dfa</span>
+              <span class="cal"> 584kcal</span>
+              <span class="price">£8</span>
             </p>
 
             <p>
-              <span class="plant">Plant </span>sausage
-              <span class="dietary df">df</span
-              ><span class="dietary vg">vg</span
-              ><span class="cal"> 301kcal</span><span class="price">£8</span>
+              <span class="plant">Plant </span>
+              sausage
+              <span class="dietary df">df</span>
+              <span class="dietary vg">vg</span>
+              <span class="cal"> 301kcal</span>
+              <span class="price">£8</span>
             </p>
           </div>
         </div>
       </article>
+      </div>
+
+      <!-- Paninies and Jackets -->
+
+      <article id="panini-jackets">
+        <div class="container menu-headings">
+          <h2>Toasted Paninies and Jacket Potatoes</h2>    
+        </div>
+        <div class="container panini">
+          <div class="food-container">
+            <img src="./images/panini.jpg" alt="#">
+          </div>
+          
+          <h2>Toasted Panini</h2>
+          <h3>Served from 9.00 - 14.30</h3>
+          <h4>Served with dressed leaves and chips</h4>
+          <div class="description">
+            <p>Bacon, Somerset Brie, cranberry<span class="cal"> 902kcal</span><span class="price">£11</span></p>
+            <p>Chicken, chorizo, Monterey Jack<span class="cal"> 892kcal</span><span class="price">£11</span></p>
+            <p>Tuna, red onion, mature cheddar<span class="cal"> 963kcal</span><span class="price">£11</span></p>
+            <p>Mozzarella, red pepper, pesto (nut free)<span class="cal"> 843kcal</span><span class="price">£11</span></p>
+            <p id="upgrade">Upgrade to sweet potato fries<span class="cal"> 43kcal</span><span class="price">£1.50</span></p>
+          </div>
+        </div>
+        <div class="container jackets">
+          <div class="food-container">
+            <img src="./images/jacket.jpg" alt="">
+          </div>
+          <h2>Jacket Potatoes</h2>
+          <h3>Served from 12.00 - 14.30</h3>
+          <h4>Mixed leaf salad, coleslaw</h4>
+          <div class="description">
+            <p>Cheese and Beans<span class="dietary gf">gf</span><span class="cal"> 738kcal</span><span class="price">£10.50</span></p>
+            <p>Chilli con carne<span class="dietary gf">gf</span><span class="dietary dfa">dfa</span><span class="cal"> 697kcal</span><span class="price">£10.50</span></p>
+            <p>Tuna mayonnaise, red onion<span class="dietary gf">gf</span><span class="dietary dfa">dfa</span><span class="cal"> 633kcal</span><span class="price">£10.50</span></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- Mains -->      
+
+      <article class="menu-list" id="mains">
+
+        <div class="container menu-headings">
+          <h2>Mains Selection</h2>
+          <h3>Served from 12.00 - 14.30</h3>          
+        </div>
+        
+        <div class="container">
+          <h3>Mushroom and lentil linguine<span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">Main £14 / Light £9</span></h3>
+          <p class="cal">801kcal / 401kcal</p>
+          <div class="description">
+            <p>Served with homemade Sourdough garlic bread</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Gammon ham and egg(s)<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">Main £14 / Light £9</span></h3>
+          <span class="cal">802kcal / 431kcal</span>
+          <div class="description">
+            <p>Served with chips</p>
+          </div>
+        </div>
+        
+        <div class="container">
+          <h3>Beer battered fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">Main 17 / light 12</span></h3>
+          <span class="cal">289kcal / 722kcal</span>
+          <div class="description">
+            <p>Mushy peas, tartare sauce</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Classic steak and ale pie<span class="price">Main £16</span></h3>
+          <span class="cal">979kcal</span>
+          <div class="description">
+            <p>Creamy mash, seasonal vegetables, rich gravy</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Chicken schnitzel burger<span class="price">Main £16</span></h3>
+          <span class="cal">1295kcal</span>
+          <div class="description">
+           <p>Focaccia, smashed avocado, chilli jam, chips</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Roasted vegetable and chickpea pie<span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">Main £16</span></h3>
+          <span class="cal">843kcal</span>
+          <div class="description">
+           <p>Sweet potato mash, seasonal vegetables, rich gravy</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Greek feta and tzatziki salad<span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="price">Main £14</span></h3>
+          <span class="cal">836kcal</span>
+          <div class="description">
+            <p>Classic Greek salad served with flatbread</p>
+          </div>
+        </div>
+
+      </article>
+
+      <!-- light Lunches -->
+
+      <section class="menu-list" id="light-lunch">
+
+        <div class="container menu-headings">
+          <h2>Light Lunches</h2>
+          <h3>Served from 12.00 - 14.30</h3>          
+        </div>
+
+        <div class="container">
+          <h3>Chef’s homemade soup of the day<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="price">£7.50</span></h3>
+          <span class="cal">Calories available upon request</span>
+          <div class="description">
+            <p>Sourdough bloomer</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Ham hock and pea terrine<span class="dietary df">df</span><span class="price">£8</span></h3>
+          <span class="cal">257kcal</span>
+          <div class="description">
+            <p>Light mixed leaf salad, Melba toast, chilli jam</p>
+          </div>
+        </div>
+
+        <div class="container">
+          <h3>Quiches of the day (Meat or Vegetable options)<span class="price">£12</span></h3>
+          <span class="cal">Calories available upon request</span>
+          <div class="description">
+            <p>Mixed leaf salad, coleslaw</p>
+          </div>
+          <div class="extras">
+          <p>Add jacket potato <span class="cal">210kcal</span><span class="price">£2.50</span></p>
+          <p>Add sweet potato fries <span class="cal">283kcal</span><span class="price">£2.50</span></p>
+          <p>Add chips <span class="cal">240kcal</span><span class="price">£2.50</span></p>              
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Sides -->
+
+      <section class="menu-list" id="sides">
+
+        <div class="container menu-headings">
+          <h2>Sides</h2>
+          <h3>Available all day</h3>          
+        </div>
+
+        <div class="container">
+          <h4>Toasted teacake<span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="cal"> 340kcal</span><span class="price">£3.50</span></h4>
+          <h4>Mixed leaf dressed salad<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vg">vg</span><span class="cal"> 76kcal</span><span class="price">£3.50</span></h4>
+          <h4>Chunky hog roast sausage roll<span class="cal"> 527kcal</span><span class="price">£4.50</span></h4>
+          <h4>Chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vga">vga</span><span class="cal"> 480kcal</span><span class="price">£4.50</span></h4>
+          <h4>Rosemary and sea salt seasoned chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vga">vga</span><span class="cal"> 340kcal</span><span class="price">£5</span></h4>
+          <h4>Sweet potato fries<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vga">vga</span><span class="cal"> 567kcal</span><span class="price">£5.50</span></h4>
+        </div>
+      </section>
+      </div>
+
+      <!--Sunday Lunch-->
+
+      <section class="menu-list" id="sunday-lunch">
+
+        <div class="container" id="sunday-headings">
+          <h2>Sunday Lunch</h2>
+          <h3>Roast lunch served alongside our menu every Sunday. All roasts accompanied with crisp roast potatoes, seasonal vegetables, Yorkshire pudding and rich gravy</h3>
+        </div>
+
+        <div class="container">
+          <h4>Beef topside<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="cal"> 1095kcal / 853kcal</span><span class="price">Main £17 / Light £13</span></h4>
+          <h4>Roast turkey and stuffing<span class="dietary gfa">gfa</span><span class="dietary df">df</span><span class="cal"> 1163kcal / 940kcal</span><span class="price">Main £17 / Light £13</span></h4>
+          <h4>Beef and turkey duo<span class="dietary gfa">gfa</span><span class="dietary df">df</span><span class="cal"> 1272kcal</span><span class="price">Main £19</span></h4>
+          <h4>Beetroot wellington<span class="dietary vg">vg</span><span class="dietary df">df</span><span class="cal"> 1314kcal</span><span class="price">Main £15</span></h4>
+          
+          <h3>Extras</h3>
+
+          <h4>Yorkshire pudding<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="cal"> 191kcal</span><span class="price">£2</span></h4>
+          <h4>Pigs in blankets<span class="dietary df">df</span><span class="cal"> 346kcal</span><span class="price">£4</span></h4>
+          <h4>Roast potatoes<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vg">vg</span><span class="cal"> 341kcal</span><span class="price">£4</span></h4>
+          <h4>Trio of extras<span class="dietary df">df</span><span class="cal"> 1070kcal</span><span class="price">£8</span></h4>
+        </div>
+      </section>
+
+      <!-- Afternoon Tea -->
+
+      <article id="afternoon-tea">
+        <div class="tea-container">
+          <h2>Afternoon Tea</h2>
+          <h3>Served Monday to Friday from 2pm</h3>
+          <img src="./images/afternoon-tea.jpg" alt="">
+          <div class="description">
+            <p>A delicious selection of finger sandwiches, savoury snacks, sweet treats & bottomless tea or coffee</p>
+          </div>
+          <p style="font-style: italic; font-size: 22px;">£22.50 per person</p>
+          <p>'Free From' options available by request</p>
+          <p>Excluding bank holidays</p>
+        </div>
+      </article>
+
+      <!-- Children's Menu -->
+
+      <article id="child-menu">
+
+        <h1>Childrens Menu</h1>
+
+         <!-- Child Breakfast-->
+
+        <section class="menu-list child-breakfast">
+
+          <div class="container menu-headings">
+            <h2>Breakfast</h2>
+            <h3>Served from 9.00 - 11.30</h3>
+          </div>
+
+          <div class="container">
+            <h3>Childrens breakfast<span class="dietary dfa">dfa</span><span class="price">£7</span></h3>
+            <span class="cal">263kcal</span>
+            <div class="description">
+              <p>Sausage, fried egg, beans, toast</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Childrens beans on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="price">£6</span></h3>
+            <span class="cal">265kcal</span>
+            <div class="description">
+              <p>Served on granary bread</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Childrens egg on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="price">£6</span></h3>
+            <span class="cal">278kcal</span>
+            <div class="description">
+              <p>Served on granary bread</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- Child lunch -->
+
+        <section class="menu-list child-lunch">
+
+          <div class="container menu-headings">
+            <h2>Lunch</h2>
+            <h3>Served from 12.00 - 14.30</h3>
+          </div>
+
+          <div class="container">
+            <h3>Ham, egg and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">£7</span></h3>
+            <span class="cal">308kcal</span>
+            <div class="description">
+              <p>Gammon ham, fried egg, chips</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Sausage and mash<span class="dietary df">df</span><span class="price">£7</span></h3>
+            <span class="cal">286kcal</span>
+            <div class="description">
+              <p>Pork sausage, mash potato, garden peas</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Penne Bolognese<span class="dietary df">df</span><span class="price">£7</span></h3>
+            <span class="cal">286kcal</span>
+            <div class="description">
+              <p>Garlic bread</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">£7</span></h3>
+            <span class="cal">377kcal</span>
+            <div class="description">
+              <p>Classic battered fish goujon, chips, garden peas</p>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Jacket with beans<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">£7</span></h3>
+            <span class="cal">341kcal</span>
+            <div class="description">
+              <p>Traditional Heinz Beans </p>
+            </div>
+            <div class="extras" id="kids-beans-extra">
+            <p><span style="font-weight: bold;">Add cheese</span><span class="dietary gf">gf</span><span class="cal">149kcal</span><span class="price">Free of charge</span></p>
+          </div>
+          </div>
+
+        </section>
+
+      </article>
+
     </main>
-    <footer></footer>
+
+    <footer>
+
+      <!-- Dietary information -->
+
+      <article class="dietary-info">
+        <div class="container">
+          <div class="free-from">
+            <p><span class="dietary gf">gf</span> Gluten free</p>
+            <p><span class="dietary df">df</span> Dairy free</p>
+            <p><span class="dietary vg">vg</span> Vegan</p>
+          </div>
+            <div class="free-available">
+            <p><span class="dietary gfa">gfa</span> Gluten free available</p>
+            <p><span class="dietary dfa">dfa</span> Dairy free available</p>
+            <p><span class="dietary vga">vga</span> Vegan available</p>
+          </div>
+        </div>
+      </article>
+    </footer>
   </body>
 </html>
