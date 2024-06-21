@@ -4,41 +4,92 @@ body {
   background-color: #eee9e0;
 }
 
-/* Breakfast Styles */
+/*headings */
 
-.breakfast-grid {
-  display: grid;
-  grid-template: repeat(2, 350px) / repeat(5, 250px);
-  gap: 20px;
-  justify-content: center;
+#breakfast-headings h2 {
+  font-size: 4em !important;
 }
 
-.breakfast-grid img {
-  width: 100%;
-  height: auto;
+.menu-headings h2,
+#sunday-headings h2,
+.tea-container h2 {
+  font-size: 3em !important;
 }
 
-.breakfast {
+#breakfast-headings h3,
+.menu-headings h3 ,
+.tea-container h3
+ {
+  font-size: 2.25em !important;
+}
+
+#breakfast-headings p,
+#sunday-headings h3 {
+  font-size: 1.45em;
+  font-weight: normal;
+}
+
+.menu-headings h3,
+#sunday-headings h3,
+.tea-container h3 {
+  margin: 0 0 0.5em 0 !important;
+}
+
+.container h2,
+.tea-container h2 {
+  margin: 0;
+  padding: 0.25em 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.container h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+
+.container,
+.tea-container
+ {
   background-color: #fff;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 
-.breakfast img {
-  max-height: 200px;
+/*
+.container img {
+  width: 100%;
+  height: auto;
+  max-height: 200px;  
+}
+  */
+
+.food-container {
+  max-height: 175px;
+  width: fit-content;
+  margin: 1em auto !important;
+  border: 1px solid #73946c;
 }
 
-.breakfast h2 {
-  margin: 0;
-  padding: 0.25em 0;
-  text-align: center;
+.food-container img {
+ height: 175px;
+ 
 }
 
-.breakfast-description {
-  padding: 0.5em;
+/*
+.b-sandwich img,
+.porridge img,
+.granola-sundae img {
+  height: 145px;
 }
+  */
 
-.breakfast .cal {
+
+
+.container .cal {
   font-style: italic;
 }
 
@@ -46,20 +97,65 @@ body {
   font-size: 15px ;
 }
 
-.price {
-  font-size: 18px !important;
-}
-
-.breakfast-description {
+.description {
   text-align: center;
   font-size: 1.3em;
+  padding: 0.5em;
 }
 
-.b-sandwich img, .porridge img, .granola-sundae img {
-  height: 145px;
+/* Non Picture Styles */
+
+/*
+.menu-list {
+  display: grid;
+  grid-template: auto auto / minmax( auto, 820px );
+  justify-content: center;
+  margin-top: 30px;
+}*/
+
+.menu-list {
+  display: grid;
+  grid-template: auto auto / minmax( auto, 1200px);
+  justify-content: center;
+  margin-top: 30px;
 }
 
-/* Dietary styles */
+.menu-headings,
+#sunday-headings {
+  background-color: #73946c;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.menu-list .container {
+  padding: 0 1em ;
+  border: 0 ;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-list .price {
+  float: right;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.menu-list h3,
+.menu-list h4 {
+  margin-bottom: 0.25em;
+  font-size: 20px;
+}
+
+.menu-list .description {
+  padding: 0 0 0.4em 0;
+  float: left;
+  margin: 0;
+}
+.menu-list .description p {
+  margin: 0;
+}
+
+/* Dietary & price styles */
 
 .health-info {
   border-bottom: 1px solid #ccc;
@@ -71,7 +167,8 @@ body {
   padding: 0 0.5em;
 }
 
-.health-info .cal {
+.health-info .cal,
+.menu-list .cal {
   float: right;
 }
 
@@ -103,22 +200,154 @@ body {
   color: #52802f;
 }
 
+.cal {
+  text-align: right;
+}
+
+.price {
+  float: right;
+  font-weight: normal;
+  font-size: 20px !important;
+}
+
 /* Header */
 
-.navbar {
+header h1,
+#child-menu h1
+ {
   text-align: center;
   color: #73946c;
-  font-size: 2em;
+  font-size: 4em;
+  margin: 10px 0;  
 }
 
-.navbar h1 {
-  margin: 10px 0;
+header nav {
+  max-width: 1200px;
+  margin: 1em auto;
+  background-color: #73946c !important;
 }
+
+
+header nav ul {
+  display: flex;
+  text-align: center;
+  padding: 0;
+  align-items: center;
+}
+
+header nav li {
+  flex: 1;
+  display: inline-block;
+  padding: 0 0.25em;
+  border-right: 1px solid #fff;
+}
+
+header nav li:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+
+/* Breakfast Styles */
+
+
+#breakfast {
+  display: grid;
+  justify-content: center;
+}
+
+#breakfast-grid {
+  display: grid;
+  grid-template: 700px 380px 450px / repeat(4, minmax( auto , 285px) );
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.traditional {
+  grid-area: 1 / 1 / 2 / 3;
+}
+.toast {
+  grid-area: 1 / 3 / 2 / 5;
+}
+.granola-sundae {
+  grid-area: 2 / 1 / 3 / 3;
+}
+.porridge {
+  grid-area: 2 / 3 / 3 / 5;
+}
+
+.b-sandwich {
+  grid-area: 3 / 2 / 4 / 4;
+}
+
+#breakfast h3 {
+  text-align: center;
+  font-size: 24px;
+  margin: 0.75em 0 0.5em 0;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid #ccc;
+}
+
+#breakfast p {
+  margin: 0.75em 1em;
+}
+
+
+@media only screen and (max-width: 1240px) {
+  #breakfast {
+    grid-template-columns: minmax(auto, 1200px) ;
+  }
+  #breakfast-headings {
+    max-width: none !important;
+  }
+  
+  #breakfast-grid {
+    grid-template: auto auto auto auto 450px / minmax(auto, 600px);
+  }
+
+  .traditional {
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+  .traditional .description {
+    padding: 0 0.5em;
+  }
+  .traditional .description p {
+    margin: 0 !important;
+  }
+  .traditional,
+  .toast {
+    padding-bottom: 1em;
+  }
+  .toast {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .granola-sundae {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .porridge {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .b-sandwich {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
+
 
 /* Breakfast Intro */
 
-.menu-breakfast {
-  grid-area: 1 / 2 / 2 / span 3;
+#breakfast-headings {
+  max-width: 1200px;
   text-align: center;
   display: grid;
   align-content: center;
@@ -127,120 +356,287 @@ body {
   color: #fff;
 }
 
+#breakfast-headings h3 {
+  margin: 0;
+  padding: 0.3em !important;
+}
+
 #breakfast-info {
   padding: 0 1em;
 }
 
-.menu-breakfast h2 {
-  font-size: 4em;
-}
 
-.menu-breakfast h3 {
-  margin: 0.75em;
-  font-size: 2.25em;
-}
-
-.menu-breakfast p {
-  font-size: 1.45em;
-}
 
 /* English Breakfast */
 
-.traditional-english {
- /* display: flex;
-  flex-flow: column;
-  */
-  display: grid;
-}
-
-.traditional {
-  grid-area: 1 / 1 / 3 / 2;
-}
-
-.plant-breakfast {
+#plant-breakfast {
+  padding: 0.75em 0 !important;
   border-top: 1px solid #ccc;
-  margin-top: 0.9em !important;
 }
 
 /* Toast */
 
-.toast {
-  grid-area: 1 / 5 / 3 / 6;
-}
 
-.toast h2 {
-  border-bottom: 1px solid #ccc;
-}
-
-.toast h3 {
-  font-weight: normal;
-  font-size: 18px;
-  margin: .25em 0;
-  padding: 0.25em 0;
+.toast aside {
   text-align: center;
+  font-size: 22px;
+  padding-bottom: 0.5em;
   border-bottom: 1px solid #ccc;
 }
 
 .toast h4 {
-  text-align: left;
-  font-size: 17.5px !important;
-  margin: 0.5em 0;
-  padding: 0.25em 0.5em;
+  margin: 0.5em 0 0.2em 0;
+  padding: 0 1em;
+  font-size: 20px;
 }
 
-.toast .breakfast-description {
-  padding: 0 0.5em;
-  margin-bottom: 0.5em;
+.toast-toppings {
+  border-top: 1px solid #ccc;
+  margin-bottom: 0.75em;
+  padding-top: 0.5em;
 }
 
-.toast p {
-  margin: 0.25em 0;
-  font-size: 0.9em !important;
-}
-.toast .price {
-  float: right;
-  font-weight: normal;
+#toast-eggs {
+  border-top: none;
 }
 
 .toast .cal {
-  text-align: center;
+  margin:0.2em 1em 0.3em 1em !important;
 }
 
-.toast .health-info:last-child {
-  border: none;
+.toast .description {
+  padding: 0;
+}
+
+.toast .description p {
+  margin: 0.4em 0 !important;
 }
 
 #avo {
-  text-align: left;
   font-style: italic;
-  margin-left: 4px;
+  padding-right: 1em;
+}
+
+/* Granola Sundae & Porridge */
+
+.granola-sundae .description,
+.porridge .description {
+  padding: 0 !important;
+}
+
+.granola-sundae .description p:first-child,
+.porridge .description p:first-child {
+  margin: 0 0 0.75em 0 !important;
+}
+
+.granola-sundae .cal {
+  margin: 0.75em 1em 0 1em !important;
 }
 
 /* Breakfast Sandwiches */
 
-.b-sandwich h2 {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 0.5em;
-}
-
-.b-sandwich .price {
-  float: right;
-}
-
-.b-sandwich .cal {
-  margin-right: 3px;
-}
-
-.b-sandwich p:first-child {
-  margin-top: 0.3em;
+.b-sandwich .description {
+  padding: 0 1em;
 }
 
 .b-sandwich p {
+  text-align: left;
+  margin: 1em 0 !important;
+}
+
+
+/* Panini and Jackets */
+
+#panini-jackets {
+  display: grid;
+  grid-template: auto 550px / repeat(2, minmax(auto, 590px));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#panini-jackets .menu-headings {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+#panini-jackets h2 {
+  border-bottom: 1px solid #ccc;
+}
+
+#panini-jackets h3,
+#panini-jackets h4 {
+  text-align: center;
+}
+
+#panini-jackets h4 {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 17px;
+  margin: 0.9em 0;
+}
+
+#panini-jackets p
+{
   margin: 0.8em 0;
-  font-size: 0.8em !important;
+  padding: 0 0.5em;
+  font-size: 1em !important;
   text-align: left;
 }
 
-.b-sandwich .cal {
-  font-size: 0.75em !important;
+#panini-jackets p:first-child {
+  margin-top: 0.3em;
+}
+
+.panini .price,
+.jackets .price {
+  float: right;
+}
+
+.panini p {
+  margin: 0.9em 0;
+}
+
+.jackets .description {
+  margin-top: 2em;
+}
+
+.jackets p {
+  margin: 1.2em 0;
+}
+
+#upgrade {
+  font-style: italic;
+}
+
+/* breakfast viewport */
+
+/*
+@media only screen and (max-width: 1370px) {
+  #breakfast {
+    grid-template: repeat(4, 350px) / repeat(2, 400px);
+  }
+  #breakfast-headings {
+    grid-area: 1 / 1 / 2 / 3;
+  }
+  .traditional {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+  .toast {
+    grid-area: 2 / 2 / 4 / 3;
+  }
+  .b-sandwich {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+  .granola-sundae {
+  }
+  .porridge {
+  }
+
+}
+*/
+
+
+
+/* Light lunches & sides */
+
+.extras {
+  margin-top: 40px;
+}
+
+.extras p {
+  margin: 0.25em 0;
+  font-size: 1.1em;
+}
+
+.extras .cal,
+#sunday-lunch .cal {
+  float: none;
+}
+
+#sides h4,
+#sunday-lunch h4 {
+  margin: 0.5em;
+}
+
+#sides .cal,
+#sunday-lunch .cal,
+#kids-beans-extra .cal {
+  margin-bottom: 0.2em;
+  float: none;
+  font-weight: normal;
+}
+
+
+/* Sunday lunch */
+
+#sunday-headings h3 {
+  font-size: 1.45em;
+}
+
+/* kids */
+
+#child-menu {
+  margin-top: 2em;
+}
+
+#kids-beans-extra {
+  padding-bottom: 0.5em;
+}
+
+/* Afternoon tea */
+
+#afternoon-tea {
+  display: grid;
+  grid-template: auto / 820px ;
+  margin-top: 30px;
+  justify-content: center;
+}
+
+.tea-container {
+  display: grid;
+  justify-items: center;
+  color: #73946c ;
+  border: 1px solid #73946c;
+}
+
+.tea-container .description {
+  padding: 0.5em 0 0 0;
+}
+
+.tea-container .description p {
+  font-size: 1.2em;
+}
+
+.tea-container p {
+  margin: 0.5em 0;
+  font-size: 17px;
+}
+
+#afternoon-tea img {
+  height: 300px;
+}
+
+/* dietary info section */
+
+.dietary-info {
+  margin-top: 30px;
+}
+
+.dietary-info .container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1330px;
+  margin: auto;
+}
+
+
+.dietary-info p {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0.65em 1em;
+}
+
+.dietary-info .dietary {
+  font-size: 16px !important;
 }
