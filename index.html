@@ -15,7 +15,10 @@
   <body>
 
     <header>
-      <h1>Garden Centre Restaurant<br />MENU</h1>
+      <div class="logo">
+        <img src="./images/logo/secret-garden-logo.png" alt="">
+      </div>
+      <h1>Restaurant Menu</h1>
       <nav class="container">
         <div >
         <ul>
@@ -43,7 +46,7 @@
             <h3>Served from 9:00 - 11:30</h3>
             <p>
               Where applicable, breakfasts will be served with fried egg(s) and
-              granary toast.<br />
+              granary toast.<br /><br />
               <span id="selection-change"
                 >Please state when placing your order if you wish to change your
                 selection</span
@@ -229,6 +232,8 @@
         <div class="container menu-headings">
           <h2>Toasted Paninies and Jacket Potatoes</h2>    
         </div>
+
+        <div id="p-j-grid">
         <div class="container panini">
           <div class="food-container">
             <img src="./images/panini.jpg" alt="#">
@@ -257,6 +262,7 @@
             <p>Chilli con carne<span class="dietary gf">gf</span><span class="dietary dfa">dfa</span><span class="cal"> 697kcal</span><span class="price">£10.50</span></p>
             <p>Tuna mayonnaise, red onion<span class="dietary gf">gf</span><span class="dietary dfa">dfa</span><span class="cal"> 633kcal</span><span class="price">£10.50</span></p>
           </div>
+        </div>
         </div>
       </article>
 
@@ -415,10 +421,12 @@
       <!-- Afternoon Tea -->
 
       <article id="afternoon-tea">
-        <div class="tea-container">
+        <div id="tea-container">
           <h2>Afternoon Tea</h2>
-          <h3>Served Monday to Friday from 2pm</h3>
-          <img src="./images/afternoon-tea.jpg" alt="">
+          <aside>Served Monday to Friday from 2pm</aside>
+          <div class="tea-img">
+            <img src="./images/afternoon-tea.jpg" alt="">
+          </div>
           <div class="description">
             <p>A delicious selection of finger sandwiches, savoury snacks, sweet treats & bottomless tea or coffee</p>
           </div>
