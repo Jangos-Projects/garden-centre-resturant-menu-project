@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="master-reset-css.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,8 +20,8 @@
         <img src="./images/logo/secret-garden-logo.png" alt="">
       </div>
       <h1>Restaurant Menu</h1>
-      <nav class="container">
-        <div >
+      <nav class="container menu-nav">
+        <div id="menu-list">
         <ul>
           <li><a href="#breakfast">Breakfast</a></li>
           <li><a href="#panini-jackets">Paninies & Jackets</a></li>
@@ -268,7 +269,7 @@
 
       <!-- Mains -->      
 
-      <article class="menu-list" id="mains">
+      <article class="menu-list four-grid" id="mains">
 
         <div class="container menu-headings">
           <h2>Mains Selection</h2>
@@ -276,15 +277,17 @@
         </div>
         
         <div class="container">
-          <h3>Mushroom and lentil linguine<span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">Main £14 / Light £9</span></h3>
-          <p class="cal">801kcal / 401kcal</p>
+          <h3>Mushroom and lentil linguine<span class="dietary df">df</span><span class="dietary vg">vg</span></h3>
+          <span class="price">Main £14 / Light £9</span>
+          <span class="cal">801kcal / 401kcal</span>
           <div class="description">
             <p>Served with homemade Sourdough garlic bread</p>
           </div>
         </div>
 
         <div class="container">
-          <h3>Gammon ham and egg(s)<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">Main £14 / Light £9</span></h3>
+          <h3>Gammon ham and egg(s)<span class="dietary gf">gf</span><span class="dietary df">df</span></h3>
+          <span class="price">Main £14 / Light £9</span>
           <span class="cal">802kcal / 431kcal</span>
           <div class="description">
             <p>Served with chips</p>
@@ -292,7 +295,8 @@
         </div>
         
         <div class="container">
-          <h3>Beer battered fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">Main 17 / light 12</span></h3>
+          <h3>Beer battered fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span></h3>
+          <span class="price">Main 17 / light 12</span>
           <span class="cal">289kcal / 722kcal</span>
           <div class="description">
             <p>Mushy peas, tartare sauce</p>
@@ -300,7 +304,8 @@
         </div>
 
         <div class="container">
-          <h3>Classic steak and ale pie<span class="price">Main £16</span></h3>
+          <h3>Classic steak and ale pie</h3>
+          <span class="price">Main £16</span>
           <span class="cal">979kcal</span>
           <div class="description">
             <p>Creamy mash, seasonal vegetables, rich gravy</p>
@@ -308,7 +313,8 @@
         </div>
 
         <div class="container">
-          <h3>Chicken schnitzel burger<span class="price">Main £16</span></h3>
+          <h3>Chicken schnitzel burger</h3>
+          <span class="price">Main £16</span>
           <span class="cal">1295kcal</span>
           <div class="description">
            <p>Focaccia, smashed avocado, chilli jam, chips</p>
@@ -316,7 +322,8 @@
         </div>
 
         <div class="container">
-          <h3>Roasted vegetable and chickpea pie<span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">Main £16</span></h3>
+          <h3>Roasted vegetable and chickpea pie<span class="dietary df">df</span><span class="dietary vg">vg</span></h3>
+          <span class="price">Main £16</span>
           <span class="cal">843kcal</span>
           <div class="description">
            <p>Sweet potato mash, seasonal vegetables, rich gravy</p>
@@ -324,7 +331,8 @@
         </div>
 
         <div class="container">
-          <h3>Greek feta and tzatziki salad<span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="price">Main £14</span></h3>
+          <h3>Greek feta and tzatziki salad<span class="dietary dfa">dfa</span><span class="dietary vga">vga</span></h3>
+          <span class="price">Main £14</span>
           <span class="cal">836kcal</span>
           <div class="description">
             <p>Classic Greek salad served with flatbread</p>
@@ -444,7 +452,7 @@
 
          <!-- Child Breakfast-->
 
-        <section class="menu-list child-breakfast">
+        <section class="menu-list four-grid" id="child-breakfast">
 
           <div class="container menu-headings">
             <h2>Breakfast</h2>
@@ -452,7 +460,8 @@
           </div>
 
           <div class="container">
-            <h3>Childrens breakfast<span class="dietary dfa">dfa</span><span class="price">£7</span></h3>
+            <h3>Childrens breakfast<span class="dietary dfa">dfa</span></h3>
+            <span class="price">£7</span>
             <span class="cal">263kcal</span>
             <div class="description">
               <p>Sausage, fried egg, beans, toast</p>
@@ -460,7 +469,8 @@
           </div>
 
           <div class="container">
-            <h3>Childrens beans on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="dietary vga">vga</span><span class="price">£6</span></h3>
+            <h3>Childrens beans on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="dietary vga">vga</span></h3>
+            <span class="price">£6</span>
             <span class="cal">265kcal</span>
             <div class="description">
               <p>Served on granary bread</p>
@@ -468,7 +478,8 @@
           </div>
 
           <div class="container">
-            <h3>Childrens egg on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span><span class="price">£6</span></h3>
+            <h3>Childrens egg on toast<span class="dietary gfa">gfa</span><span class="dietary dfa">dfa</span></h3>
+            <span class="price">£6</span>
             <span class="cal">278kcal</span>
             <div class="description">
               <p>Served on granary bread</p>
@@ -479,7 +490,7 @@
 
         <!-- Child lunch -->
 
-        <section class="menu-list child-lunch">
+        <section class="menu-list four-grid" id="child-lunch">
 
           <div class="container menu-headings">
             <h2>Lunch</h2>
@@ -487,7 +498,8 @@
           </div>
 
           <div class="container">
-            <h3>Ham, egg and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">£7</span></h3>
+            <h3>Ham, egg and chips<span class="dietary gf">gf</span><span class="dietary df">df</span></h3>
+            <span class="price">£7</span>
             <span class="cal">308kcal</span>
             <div class="description">
               <p>Gammon ham, fried egg, chips</p>
@@ -495,7 +507,8 @@
           </div>
 
           <div class="container">
-            <h3>Sausage and mash<span class="dietary df">df</span><span class="price">£7</span></h3>
+            <h3>Sausage and mash<span class="dietary df">df</span></h3>
+            <span class="price">£7</span>
             <span class="cal">286kcal</span>
             <div class="description">
               <p>Pork sausage, mash potato, garden peas</p>
@@ -503,7 +516,8 @@
           </div>
 
           <div class="container">
-            <h3>Penne Bolognese<span class="dietary df">df</span><span class="price">£7</span></h3>
+            <h3>Penne Bolognese<span class="dietary df">df</span></h3>
+            <span class="price">£7</span>
             <span class="cal">286kcal</span>
             <div class="description">
               <p>Garlic bread</p>
@@ -511,22 +525,23 @@
           </div>
 
           <div class="container">
-            <h3>Fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="price">£7</span></h3>
+            <h3>Fish and chips<span class="dietary gf">gf</span><span class="dietary df">df</span></h3>
+            <span class="price">£7</span>
             <span class="cal">377kcal</span>
             <div class="description">
               <p>Classic battered fish goujon, chips, garden peas</p>
             </div>
           </div>
 
-          <div class="container">
-            <h3>Jacket with beans<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vg">vg</span><span class="price">£7</span></h3>
+          <div class="container" id="kids-jacket">
+            <h3>Jacket with beans<span class="dietary gf">gf</span><span class="dietary df">df</span><span class="dietary vg">vg</span></h3>
+            <span class="price">£7</span>
             <span class="cal">341kcal</span>
             <div class="description">
               <p>Traditional Heinz Beans </p>
             </div>
-            <div class="extras" id="kids-beans-extra">
-            <p><span style="font-weight: bold;">Add cheese</span><span class="dietary gf">gf</span><span class="cal">149kcal</span><span class="price">Free of charge</span></p>
-          </div>
+            <h4 id="add-cheese">Add cheese</span><span class="dietary gf">gf</span><span class="cal">149kcal</span></h4>
+            <p class="price" id="add-cheese-price">£1.50</span>
           </div>
 
         </section>
