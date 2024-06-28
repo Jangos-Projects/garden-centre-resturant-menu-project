@@ -1,46 +1,59 @@
 /* Universal Styles */
+* {
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif !important;
+}
+
+html {
+  font-size: 16px;
+}
 
 body {
   background-color: #eee9e0;
+  margin: 8px !important;
 }
 
-/*headings */
+/* Universal headings */
+
+.menu-headings {
+  padding: 0.5em !important;
+}
 
 #breakfast-headings h2 {
-  font-size: 4em !important;
+  font-size: 3em !important;
+  padding: 0.15em;
 }
 
 .menu-headings h2,
-#sunday-headings h2,
-.tea-container h2 {
+#tea-container h2 {
   font-size: 3em !important;
+  font-family: "Quicksand", sans-serif !important;
+}
+
+#breakfast h3 {
+  text-align: center;
+  font-size: 1.5em !important;
+  margin: 0.75em 0 0.5em 0;
+  padding: 0.4em;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
 }
 
 #breakfast-headings h3,
-.menu-headings h3 ,
-.tea-container h3
+.menu-headings h3
  {
-  font-size: 2.25em !important;
+  font-size: 1.75em !important;
 }
 
 #breakfast-headings p,
 #sunday-headings h3 {
-  font-size: 1.45em;
+  font-size: 1.45em !important;
   font-weight: normal;
+  line-height: 120%;
 }
 
-.menu-headings h3,
-#sunday-headings h3,
-.tea-container h3 {
-  margin: 0 0 0.5em 0 !important;
-}
-
-.container h2,
-.tea-container h2 {
-  margin: 0;
-  padding: 0.25em 0;
-  text-align: center;
-  font-size: 1.5em;
+.menu-headings h3 {
+  margin: 0 !important;
 }
 
 .container h2 {
@@ -50,51 +63,53 @@ body {
   font-size: 1.5em;
 }
 
+.menu-headings {
+  background-color: #73946c !important;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.menu-list h3,
+.menu-list h4,
+.two-grid h3 {
+  margin: 0;
+  padding: 0.4em 0.5em 0.2em 0;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 105%;
+}
+
+.menu-headings h3 {
+  text-align: center;
+  padding: 0.25em;
+  font-weight: normal;
+  font-family: "Quicksand", sans-serif !important;
+}
+
+/* Universal Container styles */
 
 .container,
 .tea-container
  {
   background-color: #fff;
   border: 1px solid #ccc;
+  border-radius: 3px;
   box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
 }
 
-/*
-.container img {
-  width: 100%;
-  height: auto;
-  max-height: 200px;  
-}
-  */
-
 .food-container {
   max-height: 175px;
-  width: fit-content;
   margin: 1em auto !important;
-  border: 1px solid #73946c;
+  padding: 1em;
+  display: grid;
+  justify-content: center;
 }
 
 .food-container img {
- height: 175px;
- 
-}
-
-/*
-.b-sandwich img,
-.porridge img,
-.granola-sundae img {
-  height: 145px;
-}
-  */
-
-
-
-.container .cal {
-  font-style: italic;
-}
-
-.cal {
-  font-size: 15px ;
+ max-height: 175px;
+ max-width: 350px;
 }
 
 .description {
@@ -103,29 +118,11 @@ body {
   padding: 0.5em;
 }
 
-/* Non Picture Styles */
-
-/*
-.menu-list {
-  display: grid;
-  grid-template: auto auto / minmax( auto, 820px );
-  justify-content: center;
-  margin-top: 30px;
-}*/
-
 .menu-list {
   display: grid;
   grid-template: auto auto / minmax( auto, 1200px);
   justify-content: center;
   margin-top: 30px;
-}
-
-.menu-headings,
-#sunday-headings {
-  background-color: #73946c;
-  color: #fff;
-  text-align: center;
-  margin-bottom: 5px;
 }
 
 .menu-list .container {
@@ -136,24 +133,69 @@ body {
 
 .menu-list .price {
   float: right;
-  font-weight: normal;
+  font-weight: 300;
   font-style: italic;
 }
 
-.menu-list h3,
-.menu-list h4 {
-  margin-bottom: 0.25em;
-  font-size: 20px;
-}
 
 .menu-list .description {
-  padding: 0 0 0.4em 0;
+  padding: 0.3em 0.4em 0.3em 0;
   float: left;
   margin: 0;
 }
 .menu-list .description p {
   margin: 0;
 }
+
+ /* 2 by 2 grid layout */
+
+.four-grid-list .container,
+.four-grid {
+  display: grid;
+  grid-template: auto auto / repeat(2, auto);
+}
+
+.four-grid-list .menu-headings h2 {
+  grid-area: 1 / 1 / 2 / 3;
+}
+
+.four-grid-list .menu-headings h3 {
+  grid-area: 2 / 1 / 3 / 3;
+}
+
+.four-grid-list .price,
+.four-grid .price {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: auto 0;
+  text-align: right;
+}
+
+.four-grid-list .description,
+.four-grid .description {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.four-grid-list .cal,
+.four-grid .cal{
+  grid-area: 2 / 2 / 3 / 3;
+  float: none;
+  margin: auto 0;
+  padding: 0.25em;
+  text-align: right !important;
+}
+
+.four-grid-list .container p,
+.four-grid .description p {
+  text-align: left;
+}
+
+/* 1 by 1 grid */
+
+.two-grid {
+  display: grid;
+  grid-template: repeat(2, auto) / repeat(2, auto) ;
+}
+
 
 /* Dietary & price styles */
 
@@ -202,6 +244,8 @@ body {
 
 .cal {
   text-align: right;
+  font-size: 15px;
+  font-style: italic;
 }
 
 .price {
@@ -212,13 +256,28 @@ body {
 
 /* Header */
 
+.logo {
+  display: grid;
+  justify-content: center;
+  margin: 1em;
+}
+
+.logo img {
+  max-height: 350px;
+  width: 100%;
+}
+
+.menu-toggle {
+  display: none;
+}
+
 header h1,
 #child-menu h1
  {
   text-align: center;
   color: #73946c;
   font-size: 4em;
-  margin: 10px 0;  
+  margin: 10px 0.5em;
 }
 
 header nav {
@@ -227,24 +286,32 @@ header nav {
   background-color: #73946c !important;
 }
 
+#menu-list {
+  padding: 0.5em;
+}
 
 header nav ul {
   display: flex;
   text-align: center;
   padding: 0;
   align-items: center;
+  flex-flow: row wrap;
 }
 
 header nav li {
   flex: 1;
-  display: inline-block;
-  padding: 0 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em;
   border-right: 1px solid #fff;
+  font-size: 1em;
+  height: 40px;
 }
 
 header nav li:last-child {
   padding-right: 0;
-  border-right: 0;
+  border: none;
 }
 
 header nav a {
@@ -255,15 +322,15 @@ header nav a {
 
 header nav a:hover {
   text-decoration: underline;
+  color: #ccc;
 }
 
-
 /* Breakfast Styles */
-
 
 #breakfast {
   display: grid;
   justify-content: center;
+  margin: 0 0.25em;
 }
 
 #breakfast-grid {
@@ -291,58 +358,9 @@ header nav a:hover {
   grid-area: 3 / 2 / 4 / 4;
 }
 
-#breakfast h3 {
-  text-align: center;
-  font-size: 24px;
-  margin: 0.75em 0 0.5em 0;
-  padding-bottom: 0.4em;
-  border-bottom: 1px solid #ccc;
-}
-
 #breakfast p {
   margin: 0.75em 1em;
 }
-
-
-@media only screen and (max-width: 1240px) {
-  #breakfast {
-    grid-template-columns: minmax(auto, 1200px) ;
-  }
-  #breakfast-headings {
-    max-width: none !important;
-  }
-  
-  #breakfast-grid {
-    grid-template: auto auto auto auto 450px / minmax(auto, 600px);
-  }
-
-  .traditional {
-    grid-area: 1 / 1 / 2 / 2; 
-  }
-  .traditional .description {
-    padding: 0 0.5em;
-  }
-  .traditional .description p {
-    margin: 0 !important;
-  }
-  .traditional,
-  .toast {
-    padding-bottom: 1em;
-  }
-  .toast {
-    grid-area: 2 / 1 / 3 / 2;
-  }
-  .granola-sundae {
-    grid-area: 3 / 1 / 4 / 2;
-  }
-  .porridge {
-    grid-area: 4 / 1 / 5 / 2;
-  }
-  .b-sandwich {
-    grid-area: 5 / 1 / 6 / 2;
-  }
-}
-
 
 /* Breakfast Intro */
 
@@ -365,8 +383,6 @@ header nav a:hover {
   padding: 0 1em;
 }
 
-
-
 /* English Breakfast */
 
 #plant-breakfast {
@@ -376,11 +392,10 @@ header nav a:hover {
 
 /* Toast */
 
-
 .toast aside {
   text-align: center;
   font-size: 22px;
-  padding-bottom: 0.5em;
+  padding: 0 0.5em 0.5em 0.5em;
   border-bottom: 1px solid #ccc;
 }
 
@@ -388,6 +403,7 @@ header nav a:hover {
   margin: 0.5em 0 0.2em 0;
   padding: 0 1em;
   font-size: 20px;
+  font-weight: 500;
 }
 
 .toast-toppings {
@@ -441,26 +457,40 @@ header nav a:hover {
 
 .b-sandwich p {
   text-align: left;
-  margin: 1em 0 !important;
+  margin: 0.6em 0 !important;
 }
-
 
 /* Panini and Jackets */
 
 #panini-jackets {
   display: grid;
-  grid-template: auto 550px / repeat(2, minmax(auto, 590px));
-  gap: 20px;
   justify-content: center;
   margin-top: 30px;
 }
 
+#p-j-grid {
+  display: grid;
+  grid-template: 550px / repeat(2, minmax(auto, 590px));
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
 #panini-jackets .menu-headings {
-  grid-area: 1 / 1 / 2 / 3;
+  max-width: 1200px;
+  display: grid;
+  justify-content: center;
 }
 
 #panini-jackets h2 {
-  border-bottom: 1px solid #ccc;
+  margin: 0 0.5em;
+  padding: 0.3em;
+  font-family: "Quicksand", sans-serif;
+}
+
+#panini-jackets h3 {
+  padding: 0.5em;
+  font-size: 18px;
 }
 
 #panini-jackets h3,
@@ -472,11 +502,12 @@ header nav a:hover {
   font-style: italic;
   font-weight: normal;
   font-size: 17px;
-  margin: 0.9em 0;
+  margin: 0;
+  padding: 0.5em;
+  border-bottom: 1px solid #ccc;
 }
 
-#panini-jackets p
-{
+#panini-jackets p {
   margin: 0.8em 0;
   padding: 0 0.5em;
   font-size: 1em !important;
@@ -487,60 +518,62 @@ header nav a:hover {
   margin-top: 0.3em;
 }
 
-.panini .price,
-.jackets .price {
-  float: right;
+#panini .description {
+  display: grid;
+  grid-template: repeat(5, auto) / auto auto;
 }
 
-.panini p {
-  margin: 0.9em 0;
+#panini .price,
+#jackets .price {
+  text-align: right;
+  margin: auto 0;
 }
 
-.jackets .description {
-  margin-top: 2em;
+#panini p {
+  margin: 0.5em 0;
 }
 
-.jackets p {
-  margin: 1.2em 0;
+#jackets .description {
+  display: grid;
+  grid-template: repeat(3, auto) / auto auto;
+  margin-top: 1em;
+}
+
+#jackets p {
+  margin: 1em 0;
 }
 
 #upgrade {
   font-style: italic;
 }
 
-/* breakfast viewport */
+/* Light lunches and extras */
 
-/*
-@media only screen and (max-width: 1370px) {
-  #breakfast {
-    grid-template: repeat(4, 350px) / repeat(2, 400px);
-  }
-  #breakfast-headings {
-    grid-area: 1 / 1 / 2 / 3;
-  }
-  .traditional {
-    grid-area: 2 / 1 / 4 / 2;
-  }
-  .toast {
-    grid-area: 2 / 2 / 4 / 3;
-  }
-  .b-sandwich {
-    grid-area: 4 / 1 / 5 / 3;
-  }
-  .granola-sundae {
-  }
-  .porridge {
-  }
-
+#quiches {
+  display: grid;
+  grid-template: repeat(3, auto) / repeat(2, auto) ;
 }
-*/
 
+#quiches .extras {
+  display: grid;
+  grid-area: 3 / 1 / 4 / 3;
+  grid-template: repeat(3, auto) / repeat(2, auto) ;
+}
 
+#quiches .description p {
+  text-align: left;
+}
 
-/* Light lunches & sides */
+#quiches .price,
+#quiches .cal,
+.two-grid .price,
+#add-cheese-price {
+  margin: auto 0;
+  text-align: right;
+}
 
 .extras {
-  margin-top: 40px;
+  font-size: 22px !important;
 }
 
 .extras p {
@@ -549,14 +582,13 @@ header nav a:hover {
 }
 
 .extras .cal,
-#sunday-lunch .cal {
+#sunday-lunch .cal,
+#add-cheese .cal {
   float: none;
+  font-weight: normal;
 }
 
-#sides h4,
-#sunday-lunch h4 {
-  margin: 0.5em;
-}
+/* sides */
 
 #sides .cal,
 #sunday-lunch .cal,
@@ -566,8 +598,11 @@ header nav a:hover {
   font-weight: normal;
 }
 
-
 /* Sunday lunch */
+
+#sunday-lunch .extras {
+  grid-area: 5 / 1 / 6 / 3;
+}
 
 #sunday-headings h3 {
   font-size: 1.45em;
@@ -579,8 +614,17 @@ header nav a:hover {
   margin-top: 2em;
 }
 
-#kids-beans-extra {
-  padding-bottom: 0.5em;
+#kids-jacket {
+  grid-template: auto auto auto / 3fr 1fr;
+}
+#add-cheese {
+  grid-area: 3 / 1 / 4 / 2;
+  font-style: italic;
+  margin: 0;
+  padding: 0.2em 0.3em 0.5em 0;
+}
+#add-cheese-price {
+  grid-area: 3 / 2 / 4 / 3;
 }
 
 /* Afternoon tea */
@@ -592,28 +636,47 @@ header nav a:hover {
   justify-content: center;
 }
 
-.tea-container {
+#tea-container {
   display: grid;
   justify-items: center;
   color: #73946c ;
   border: 1px solid #73946c;
+  padding: 0 0.5em;
+  background-color: #fff;
 }
 
-.tea-container .description {
-  padding: 0.5em 0 0 0;
+#afternoon-tea h2 {
+  margin: 0.5em;
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
 }
 
-.tea-container .description p {
+#afternoon-tea aside {
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#afternoon-tea .description {
+  padding: 0;
+}
+
+#afternoon-tea .description p {
   font-size: 1.2em;
 }
 
-.tea-container p {
-  margin: 0.5em 0;
+#afternoon-tea p {
   font-size: 17px;
+  margin: 0.5em 0.25em;
+  line-height: 120%;
+}
+
+#afternoon-tea .tea-img {
+  margin: 1em 1.25em;
 }
 
 #afternoon-tea img {
-  height: 300px;
+  max-height: 300px;
+  width: 100%;
 }
 
 /* dietary info section */
@@ -624,19 +687,271 @@ header nav a:hover {
 
 .dietary-info .container {
   display: flex;
-  flex-flow: column;
+  flex-flow: column wrap;
   align-items: center;
-  max-width: 1330px;
+  max-width: 1200px;
   margin: auto;
+  border: 1px solid #73946c;
 }
 
+.free-available {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;  
+}
 
 .dietary-info p {
   display: inline-block;
-  font-size: 18px;
+  font-size: 1.1em;
   margin: 0.65em 1em;
 }
 
 .dietary-info .dietary {
   font-size: 16px !important;
+}
+
+.free-from {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: center;
+}
+
+/* footer */
+
+footer section {
+  margin: 20px auto 0 auto;
+  max-width: 1200px;
+}
+
+footer .created-by {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25em;
+}
+
+.created-by p {
+  margin: 0;
+  font-style: italic;
+}
+
+footer .logo-icon {
+  margin-left: 0.5em;
+  padding: 0.25em;  
+}
+
+footer .logo-icon img{
+  height: 25px;
+}
+#disclaimer {
+  padding: 0.25em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#disclaimer p {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* View port */
+
+@media only screen and (max-width: 1240px) {
+  #breakfast {
+    grid-template-columns: minmax(auto, 1200px) ;
+  }
+  #breakfast-headings {
+    max-width: none !important;
+  }
+  #breakfast-grid {
+    grid-template: repeat(5, auto) / minmax(auto, 600px);
+  }
+  .traditional {
+    grid-area: 1 / 1 / 2 / 2; 
+  }
+  .traditional .description {
+    padding: 0 0.5em;
+  }
+  .traditional .description p {
+    margin: 0 !important;
+  }
+  .traditional,
+  .toast {
+    padding-bottom: 1em;
+  }
+  .toast {
+    grid-area: 2 / 1 / 3 / 2;
+  }
+  .granola-sundae {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  .porridge {
+    grid-area: 4 / 1 / 5 / 2;
+  }
+  .b-sandwich {
+    grid-area: 5 / 1 / 6 / 2;
+  }
+}
+
+@media only screen and (max-width: 1020px) {
+  #panini-jackets {
+    grid-template-columns: minmax(auto, 1200px) ;
+  }  
+  #p-j-grid {
+    grid-template: repeat(2, auto) / minmax(auto, 590px);
+  }
+
+  #panini-jackets .menu-headings {
+    max-width: none !important;
+  }
+  #jackets .description {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #afternoon-tea {
+    grid-template: auto / auto ;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  header nav ul {
+    flex-flow: column;
+    margin: 0.5em 3em;
+  }
+  header nav li {
+    border-bottom: 1px solid #ccc;
+    border-right: none;
+    padding: 0.25em;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  #afternoon-tea .description p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3em;
+  }
+  #breakfast-headings h2, 
+  .menu-headings h2,
+  #tea-container h2 {
+    font-size: 2.5em !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #panini-jackets p {
+    font-size: 0.8em !important;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .menu-headings h2,
+  #tea-container h2,
+  #breakfast-headings h2
+   {
+    font-size: 2em !important;
+  }
+  #breakfast-headings p {
+    padding: 0 !important;
+    margin: 0.75em 0.25em !important;
+    font-size: 1.2em !important;
+  }
+  .menu-headings h3 {
+    font-size: 1.75em !important;
+  }
+  #sunday-headings h3 {
+    font-size: 1.2em !important;
+  }
+  .description p {
+    font-size: 0.8em !important;
+  }
+  .menu-list h3,
+  .menu-list h4 {
+    font-size: 18px !important;
+  }
+  .price {
+    font-size: 16px !important;
+  }
+  header h1,
+  #child-menu h1 {
+    font-size: 2.5em;
+  }
+  .logo img {
+    max-height: 250px;
+  }
+  #breakfast h3 {
+    font-size: 22px !important;
+  }
+  #breakfast p {
+    margin: 0.75em 0.5em;
+    padding: 0 0.5em;
+  }
+  .toast h4 {
+    font-size: 18px;
+  }
+  .toast aside {
+    font-size: 19px;
+  }
+  .b-sandwich p {
+    font-size: 0.8em !important;
+  }
+  .dietary-info p {
+    font-size: 1em;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .food-container {
+    margin: auto 0 auto !important;
+  }
+  .food-container img {
+    max-height: 125px;
+  }
+  #breakfast h3 {
+    margin: 0 0 0.5em 0 !important;
+    padding: 0 0.4em 0.4em 0.4em;
+  }
+  .traditional .description p {
+    margin-bottom: 0.5em !important;
+  }
+  .traditional,
+  .toast {
+    padding-bottom: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .food-container img {
+    max-height: 100px;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  header h1,
+  #child-menu h1 {
+    font-size: 2em;
+  }
+  .menu-headings h2,
+  #tea-container h2,
+  #breakfast-headings h2 {
+    font-size: 1.8em !important;
+  }
+  #breakfast-headings p {
+    font-size: 1em !important;
+  }
+}
+
+@media only screen and (max-width: 290px) {
+  .food-container img {
+  max-height: 80px;
+  }
 }
